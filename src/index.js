@@ -48,10 +48,10 @@ function guardaHerois(i, nome, xp, nivel)
 {
     novoHeroi.push(i, nome, xp, nivel);
 
-    if()
+   /* if()
     {
         arrayGuardaHerois.push(novoHeroi); 
-    }
+    }*/
        
 }
 

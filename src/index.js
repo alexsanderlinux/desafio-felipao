@@ -44,52 +44,58 @@ console.log("Entre com 4 herois para criar um time de lendarios e enfrentar as a
 let novoHeroi = [];
 let arrayGuardaHerois = [];
 
-function guardaHerois(nome, xp, nivel)
+function guardaHerois(i, nome, xp, nivel)
 {
-    novoHeroi.push(nome, xp, nivel);    
+    novoHeroi.push(i, nome, xp, nivel);
+
+    if()
+    {
+        arrayGuardaHerois.push(novoHeroi); 
+    }
+       
 }
 
-function verificaExp(xp, name, nivelName)
+function verificaExp(i, xp, name, nivelName)
 {
     if(xp <= 1000)
     {
         nivelName ="Ferro";
-        guardaHerois(name, xp, nivelName);
+        guardaHerois(i, name, xp, nivelName);
     }
     else if(xp >= 1001 && xp <= 2000)
     {
         nivelName = "Bronze";
-        guardaHerois(name, xp, nivelName);      
+        guardaHerois(i, name, xp, nivelName);      
     }
     else if(xp >= 2001 && xp <= 5000)
     {
         nivelName = "Prata";
-        guardaHerois(name, xp, nivelName);     
+        guardaHerois(i, name, xp, nivelName);     
     }
     else if(xp >= 5001 && xp <= 7000)
     {
         nivelName = "Ouro";
-        guardaHerois(name, xp, nivelName);      
+        guardaHerois(i, name, xp, nivelName);      
     }
     else if(xp >= 7001 && xp <= 8000)
     {
         nivelName = "Platina";
-        guardaHerois(name, xp, nivelName);
+        guardaHerois(i, name, xp, nivelName);
     }
     else if(xp >= 8001 && xp <= 9000)
     {
         nivelName = "Ascendente";
-        guardaHerois(name, xp, nivelName);
+        guardaHerois(i, name, xp, nivelName);
     }
     else if(xp >= 9001 && xp <= 10000)
     {
         nivelName = "Imortal";
-        guardaHerois(name, xp, nivelName);
+        guardaHerois(i, name, xp, nivelName);
     }
     else if(xp >= 10001)
     {
         nivelName = "Radiante";
-        guardaHerois(name, xp, nivelName);
+        guardaHerois(i, name, xp, nivelName);
     }
 
     console.log(`A XP do heroi é = ${xp} e ele esta no nivel ${nivelName} `);
@@ -109,7 +115,7 @@ for(i = 0; i <= 3; i++)
     
     
   
-        verificaExp(xp, name, nivelName); 
+        verificaExp(i, xp, name, nivelName); 
        
      
 }

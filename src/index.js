@@ -44,68 +44,79 @@ console.log("Entre com 4 herois para criar um time de lendarios e enfrentar as a
 let novoHeroi = [];
 let arrayGuardaHerois = [];
 
-for(i = 1; i <= 4; i++)
+function guardaHerois(nome, xp, nivel)
 {
-    let nivelName = null;
+    novoHeroi.push(nome, xp, nivel);    
+}
 
-    const name = prompt(`Entre com o nome do Heroi ${i}: `);
-    console.log(`Heroi ${i}, ${name}!`);
-
-    const xp = prompt(`Entre com o nivel de XP do seu heroi: `);
-    
-
+function verificaExp(xp, name, nivelName)
+{
     if(xp <= 1000)
     {
         nivelName ="Ferro";
-        novoHeroi.push(name, xp, nivelName);
+        guardaHerois(name, xp, nivelName);
     }
     else if(xp >= 1001 && xp <= 2000)
     {
         nivelName = "Bronze";
-        novoHeroi.push(name, xp, nivelName);        
+        guardaHerois(name, xp, nivelName);      
     }
     else if(xp >= 2001 && xp <= 5000)
     {
         nivelName = "Prata";
-        novoHeroi.push(name, xp, nivelName);       
+        guardaHerois(name, xp, nivelName);     
     }
     else if(xp >= 5001 && xp <= 7000)
     {
         nivelName = "Ouro";
-        novoHeroi.push(name, xp, nivelName);        
+        guardaHerois(name, xp, nivelName);      
     }
     else if(xp >= 7001 && xp <= 8000)
     {
         nivelName = "Platina";
-        novoHeroi.push(name, xp, nivelName);
+        guardaHerois(name, xp, nivelName);
     }
     else if(xp >= 8001 && xp <= 9000)
     {
         nivelName = "Ascendente";
-        novoHeroi.push(name, xp, nivelName);
+        guardaHerois(name, xp, nivelName);
     }
     else if(xp >= 9001 && xp <= 10000)
     {
         nivelName = "Imortal";
-        novoHeroi.push(name, xp, nivelName);
+        guardaHerois(name, xp, nivelName);
     }
     else if(xp >= 10001)
     {
         nivelName = "Radiante";
-        novoHeroi.push(name, xp, nivelName);
+        guardaHerois(name, xp, nivelName);
     }
 
     console.log(`A XP do heroi é = ${xp} e ele esta no nivel ${nivelName} `);
+}
+
+for(i = 0; i <= 3; i++)
+{
+    let nivelName = null;
+    let contador = i+1;
+    
+
+    const name = prompt(`Entre com o nome do Heroi ${contador}: `);
+    console.log(`Heroi ${contador}, ${name}!`);
+
+    const xp = prompt(`Entre com o nivel de XP do seu heroi: `);
 
     
+    
+  
+        verificaExp(xp, name, nivelName); 
+       
      
 }
 
-novoHeroi.forEach(element => {
-        arrayGuardaHerois.push(element);
-    });
 
-console.log(arrayGuardaHerois);
+
+console.log(novoHeroi.toString());
 
 
 

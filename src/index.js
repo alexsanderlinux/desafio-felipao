@@ -125,9 +125,12 @@ for(i = 0; i <= 3; i++)
 
 arrayGuardaHeroisFormatado = JSON.stringify(arrayGuardaHerois);
 
+console.log(`Herois da guilda: (id, nome, xp, nivel):`);
 console.log(arrayGuardaHerois);
 console.log(arrayGuardaHeroisFormatado);
-//console.log(`array multidimencional formatado : + ${arrayGuardaHerois.toString([0]'- \n')}`);
+
+
+
 
 
 

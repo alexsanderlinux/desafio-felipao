@@ -47,12 +47,10 @@ let arrayGuardaHerois = [];
 function guardaHerois(i, nome, xp, nivel)
 {
     novoHeroi.push(i, nome, xp, nivel);
+        
+    arrayGuardaHerois.push(novoHeroi); 
 
-   /* if()
-    {
-        arrayGuardaHerois.push(novoHeroi); 
-    }*/
-       
+    novoHeroi = [];
 }
 
 function verificaExp(i, xp, name, nivelName)
@@ -61,41 +59,49 @@ function verificaExp(i, xp, name, nivelName)
     {
         nivelName ="Ferro";
         guardaHerois(i, name, xp, nivelName);
+        
     }
     else if(xp >= 1001 && xp <= 2000)
     {
         nivelName = "Bronze";
-        guardaHerois(i, name, xp, nivelName);      
+        guardaHerois(i, name, xp, nivelName);
+          
     }
     else if(xp >= 2001 && xp <= 5000)
     {
         nivelName = "Prata";
-        guardaHerois(i, name, xp, nivelName);     
+        guardaHerois(i, name, xp, nivelName);
+       
     }
     else if(xp >= 5001 && xp <= 7000)
     {
         nivelName = "Ouro";
-        guardaHerois(i, name, xp, nivelName);      
+        guardaHerois(i, name, xp, nivelName);
+             
     }
     else if(xp >= 7001 && xp <= 8000)
     {
         nivelName = "Platina";
         guardaHerois(i, name, xp, nivelName);
+        
     }
     else if(xp >= 8001 && xp <= 9000)
     {
         nivelName = "Ascendente";
         guardaHerois(i, name, xp, nivelName);
+        
     }
     else if(xp >= 9001 && xp <= 10000)
     {
         nivelName = "Imortal";
         guardaHerois(i, name, xp, nivelName);
+        
     }
     else if(xp >= 10001)
     {
         nivelName = "Radiante";
         guardaHerois(i, name, xp, nivelName);
+        
     }
 
     console.log(`A XP do heroi é = ${xp} e ele esta no nivel ${nivelName} `);
@@ -112,17 +118,16 @@ for(i = 0; i <= 3; i++)
 
     const xp = prompt(`Entre com o nivel de XP do seu heroi: `);
 
-    
-    
-  
-        verificaExp(i, xp, name, nivelName); 
+    verificaExp(i, xp, name, nivelName); 
        
      
 }
 
+arrayGuardaHeroisFormatado = JSON.stringify(arrayGuardaHerois);
 
-
-console.log(novoHeroi.toString());
+console.log(arrayGuardaHerois);
+console.log(arrayGuardaHeroisFormatado);
+//console.log(`array multidimencional formatado : + ${arrayGuardaHerois.toString([0]'- \n')}`);
 
 
 
